@@ -1,0 +1,80 @@
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  // use system UI font
+  font: menu;
+}
+
+.email-list-component {
+  width: 100%;
+}
+
+.email-list-tokens {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  //overflow-x: hidden;
+  height: auto;
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  cursor: text;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.email-list-token {
+  overflow: hidden;
+  height: auto;
+  margin: 5px;
+  padding: 3px;
+  background-color: #d7d7d7;
+  color: #000;
+  cursor: default;
+  font-size: 15px;
+  white-space: nowrap;
+  list-style: none;
+
+  &__value {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__close-btn {
+    padding: 0 5px 0 5px;
+    background-color: #7a7ace;
+    color: #fff;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__input {
+    flex-grow: 2;
+  }
+
+  &--selected {
+    background-color: #7a7ace;
+    color: white;
+  }
+}
+
+.email-list-input {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border: 0;
+  width: 100%;
+  padding: 3px 8px;
+  background-color: #fff;
+  margin: 2px 0;
+}
+
+.email-list__invalid-msg {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ca0a0a;
+}

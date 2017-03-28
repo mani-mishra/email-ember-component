@@ -1,0 +1,26 @@
+<label class="email-list-label">
+  Start Typing or Paste a list of email values
+</label>
+
+<ul class="email-list-tokens">
+  {{#each emails as |email|}}
+    <li class="email-list-token {{if email.selected 'email-list-token--selected'}}">
+      <p class="email-list-token__value">{{email.value}}</p>
+      <span class="email-list-token__close-btn" {{action "deleteEmailToken" email.value}}>×</span>
+    </li>
+  {{/each}}
+  <li class="email-list-token__input">
+    {{input
+      autocomplete="off"
+      class="email-list-input"
+      value=inputValue
+      key-up=(action "onKeyUp")
+    }}
+  </li>
+</ul>
+
+{{#if invalidEmailMsg}}
+<div class="email-list__invalid-msg">
+  <em>{{invalidEmailMsg}}</em>
+</div>
+{{/if}}
